@@ -1,0 +1,9 @@
+/home/kali/uni/asor/asor-repo/practica2.2: drwxr-xr-x 2 kali kali 4096 Nov  4 08:52 .
+Directorio; permisos de lectura(r), escritura(w) y ejecución(x) para el usuario; rx para el grupo y rx para el resto.
+
+/home/kali/uni/asor/asor-repo/practica2.2: drwx------ 12 root root 4096 Nov  4 06:24 /root/
+Directorio; permisos rwx para el propietario.
+
+/home/kali/uni/asor/asor-repo/practica2.2 dr-xr-xr-x 223 root root 0 Nov  4 06:24 /proc/
+Directorio; permisos rw para el propietario, el grupo y el resto.
+
