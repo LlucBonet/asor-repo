@@ -2,42 +2,59 @@ Comando ls:
 Muestra el contenido de un directorio y los atributos básicos de sus ficheros.
 Opciones:
 
--a:	No ignorar entradas que empiezan por .
+
+-a:	no ignorar las entradas que empiezan por .
 .
 ..
 ejercicio1.sh
 ejercicio1.txt
+ejercicio2.sh
+ejercicio2.txt
 
 -l:	usar un formato de lista largo.
-total 8
--rwxr-xr-x 1 kali kali 791 Nov  4 08:00 ejercicio1.sh
--rw-r--r-- 1 kali kali 217 Nov  4 08:09 ejercicio1.txt
+total 16
+-rwxr-xr-x 1 kali kali 782 Nov  4 09:05 ejercicio1.sh
+-rw-r--r-- 1 kali kali 251 Nov  4 09:05 ejercicio1.txt
+-rwxr-xr-x 1 kali kali 356 Nov  4 08:50 ejercicio2.sh
+-rw-r--r-- 1 kali kali 501 Nov  4 08:52 ejercicio2.txt
 
--d:	solo lista los directorios, no sus contenidos.
+-d:	solo lista directorios, no su contenido.
 .
 
--h:	junto con las opciones -l y -s, muestra los tamaños como 1K, 234M, 2G, etc.
-total 8.0K
--rwxr-xr-x 1 kali kali 791 Nov  4 08:00 ejercicio1.sh
--rw-r--r-- 1 kali kali 470 Nov  4 08:09 ejercicio1.txt
+-h:	junto con las opciones -l y -s , muestra los tamaños como 1K, 234M, 2G, etc.
+total 16K
+-rwxr-xr-x 1 kali kali 782 Nov  4 09:05 ejercicio1.sh
+-rw-r--r-- 1 kali kali 609 Nov  4 09:05 ejercicio1.txt
+-rwxr-xr-x 1 kali kali 356 Nov  4 08:50 ejercicio2.sh
+-rw-r--r-- 1 kali kali 501 Nov  4 08:52 ejercicio2.txt
 
 -i:	imprime el inodo de cada fichero.
-532412 ejercicio1.sh
+532870 ejercicio1.sh
 532408 ejercicio1.txt
+532859 ejercicio2.sh
+532822 ejercicio2.txt
 
 -R:	muestra los subdirectorios de forma recursiva.
 .:
 ejercicio1.sh
 ejercicio1.txt
+ejercicio2.sh
+ejercicio2.txt
 
 -1:	muestra un fichero por linea.
 ejercicio1.sh
 ejercicio1.txt
+ejercicio2.sh
+ejercicio2.txt
 
--F:	añadir un indicador (*/->@) a a las entradas.
+-F:	añadir un indicador(*/->@) a las entradas.
 ejercicio1.sh*
 ejercicio1.txt
+ejercicio2.sh*
+ejercicio2.txt
 
---color:[=WHEN]:	coloriza el resultado; WHEN puede ser 'always' (por defecto), 'auto' o 'never'.
+--color[=WHEN]	coloriza el resultado; WHEN puede ser 'always' (por defecto), 'auto' o 'never'.
 [0m[01;32mejercicio1.sh[0m
 ejercicio1.txt
+[01;32mejercicio2.sh[0m
+ejercicio2.txt
