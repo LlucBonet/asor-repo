@@ -1,0 +1,8 @@
+Crear directorio test/
+drwxr-xr-x 2 kali kali 4096 Nov  5 07:16 test/
+
+Quitar los permisos de ejecución: chmod -x test/
+drw-r--r-- 2 kali kali 4096 Nov  5 07:16 test/
+
+Intentar cambiar al directorio:
+./ejercicio4.sh: line 8: cd: test/: Permission denied
