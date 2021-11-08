@@ -7,17 +7,21 @@
 //Escribir un programa que, usando open(2), cree un fichero con los permisos rw-r--r-x.
 
 int main(int argc, char** argv){
-	umask(0027);
+	mode_t mask_old = umask(0027);
+	int fd; 
 
 	if(argc != 2){
 		perror("Modo de uso: ./ejercicio5 <nombre del fichero>");
+		return -1;
 	}
-	else if(access(argv[1], F_OK) == 0){
-		perror("Este fichero ya existe.");
+
+	fd = open(argv[1], O_WRONLY | O_CREAT | O_TRUNC, 0777); 
+	if(fd == -1){
+		perror("Error");
+		return fd;	
 	}
-	else if(open(argv[1], O_CREAT, 00645) == -1){
-		perror("Error");	
-	}
+	close(fd);
+	umask(mask_old);
 	return 1;
 
 }
