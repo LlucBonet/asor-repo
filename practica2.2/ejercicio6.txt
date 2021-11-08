@@ -1,0 +1,5 @@
+Fijar la máscara de forma que los nuevos ficheros no tengan permiso de escritura para el grupo y no tengan ningún permiso para otros. Comando: umask 0027
+Comprobar el funcionamiento con touch, mkdir y ls:
+total 4
+-rw-r----- 1 kali kali    0 Nov  8 03:52 test1.txt
+drwxr-x--- 2 kali kali 4096 Nov  8 03:52 test2
