@@ -1,0 +1,8 @@
+stat: MUestra el estado de un fichero o del sistema de ficheros.
+
+Opciones:
+-L: sigue enlaces
+-f: muestra el estado del sistema de ficheros en lugar del estado del fichero
+-c: usa el formato especificado en lugar de el formato por defecto.
+--print: similar a -c, pero interpreta secuencias de escape.
+-t: muestra la información de forma breve
