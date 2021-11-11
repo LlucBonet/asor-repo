@@ -1,0 +1,31 @@
+Antes de los enlaces simbólicos:
+532940 test1.txt
+532941 test2
+
+Después de los enlaces simbólicos:
+
+532942 test1sim.txt
+532940 test1.txt
+532941 test2
+532943 test2sim
+ln: test2/: hard link not allowed for directory
+
+Después de los enlaces rígidos (no se permite para directorios):
+532940 test1rig.txt
+532942 test1sim.txt
+532940 test1.txt
+532941 test2
+532943 test2sim
+
+Intento leer el contenido de test1sim.txt:
+cat: test1sim.txt: No such file or directory
+
+Intento acceder al directorio test2 a través de test2sim:
+./ejercicio10.sh: line 22: ./test2sim: No such file or directory
+
+Intento acceder al contenido de test1rig.txt:
+Contenido del fichero test1.txt
+
+Con enlace rígido si se elimina el enlace original, no pasa nada.
+
+Con enlace simbólico si se elmina el enlace original, se rompe el enlace y no se puede abrir el fichero.
