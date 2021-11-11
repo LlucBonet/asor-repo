@@ -18,3 +18,14 @@ int main(int argc, char **argv){
 	close(fd);
 	return 1;
 }
+
+//Hay diferencia si los descriptores de ficheros son distintos.
+
+/*
+ ls > dirlist 2>&1 imprime todo lo que salga de ls (incluido errores) al 
+ fichero dirlist y luego los errores que se produzcan en el acceso a dirlist,
+ se imprimen por salida estandar.
+
+ ls 2>&1 dirlist imprime la salida de error por pantalla pero no escribe
+ nada en dirlist.
+ * */
