@@ -8,11 +8,12 @@ int main(int argc, char **argv){
 	int fd;
 
 	if ((fd = open(argv[1], O_CREAT | O_APPEND | O_RDWR, 0666)) == -1){
-		perror("Error. Modo de uso: ./ejercicio12 ruta");		     }
+		perror("Error. Modo de uso: ./ejercicio13 ruta");		     }
 	else{
 		dup2(fd, 1);
-		printf("printf redirigido a un fichero\n");
-		printf("Otro printf\n");
+		dup2(fd, 2);
+		printf("Salida estandar redirigida a un fichero\n");
+		perror("Error redirigido a fichero\n");
 	}
 	close(fd);
 	return 1;
