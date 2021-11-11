@@ -1,27 +1,35 @@
 Antes de los enlaces simbólicos:
-532940 test1.txt
-532941 test2
+660172 test1.txt
+660173 test2
 
 Después de los enlaces simbólicos:
 
-532942 test1sim.txt
-532940 test1.txt
-532941 test2
-532943 test2sim
+660174 test1sim.txt
+660172 test1.txt
+660173 test2
+660175 test2sim
 ln: test2/: hard link not allowed for directory
 
 Después de los enlaces rígidos (no se permite para directorios):
-532940 test1rig.txt
-532942 test1sim.txt
-532940 test1.txt
-532941 test2
-532943 test2sim
+660172 test1rig.txt
+660174 test1sim.txt
+660172 test1.txt
+660173 test2
+660175 test2sim
+  File: ./
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 801h/2049d	Inode: 660171      Links: 3
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/    kali)   Gid: ( 1000/    kali)
+Access: 2021-11-11 07:46:38.365020220 -0500
+Modify: 2021-11-11 07:46:38.361022220 -0500
+Change: 2021-11-11 07:46:38.361022220 -0500
+ Birth: 2021-11-11 07:46:38.341032220 -0500
 
 Intento leer el contenido de test1sim.txt:
 cat: test1sim.txt: No such file or directory
 
 Intento acceder al directorio test2 a través de test2sim:
-./ejercicio10.sh: line 22: ./test2sim: No such file or directory
+./ejercicio10.sh: line 23: ./test2sim: No such file or directory
 
 Intento acceder al contenido de test1rig.txt:
 Contenido del fichero test1.txt
